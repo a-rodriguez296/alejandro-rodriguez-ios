@@ -21,16 +21,16 @@ class CoreDataOperations {
         //Iterate over categories and save the applications associated to each of them.
         for category in categories{
             
+            //Create Core Data objects. FYI these objects are saved when the autoSave() function is called in the class AppDelegate
+            let cdCategory = CDCategory(name: category, context: NSManagedObjectContext.mr_default())
+            
             let filteredApplications = applications.filter({ (application: Application) -> Bool in
                 return application.category == category
             })
             
             for application in filteredApplications{
                 
-                //Create Core Data objects. FYI these objects are saved when the autoSave() function is called in the class AppDelegate
-                
-                let cdCategory = CDCategory(name: category, context: NSManagedObjectContext.mr_default())
-                
+                //Assign to cdCategory its corresponding applications
                 let _ = CDApplication(application: application, category: cdCategory, context: NSManagedObjectContext.mr_default())
             }
         }

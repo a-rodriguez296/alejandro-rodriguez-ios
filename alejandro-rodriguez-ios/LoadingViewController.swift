@@ -41,16 +41,23 @@ extension LoadingViewController: LoadingViewModelProtocol{
     
     func didDownloadData( success: Bool, error: String?) {
         if success{
+            
+            
+            let when = DispatchTime.now() + 1.5
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                let rootVC = UINavigationController(rootViewController: CategoriesViewController())
+                self.present(rootVC, animated: true, completion: nil)
+            }
+           
+            
         }
         else{
             
-            //This is a Swift bug. 
+            //This is a Swift bug.
             DispatchQueue.main.async {
-               self.present(self.configureAlertControllerWith(message: error!), animated: true)
+                self.present(self.configureAlertControllerWith(message: error!), animated: true)
             }
             
         }
-        
-        
     }
 }

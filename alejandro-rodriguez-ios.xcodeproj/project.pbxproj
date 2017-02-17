@@ -24,6 +24,9 @@
 		359D1F7F1E575569008FD539 /* CoreDataOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F7E1E575569008FD539 /* CoreDataOperations.swift */; };
 		359D1F811E575BA9008FD539 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F801E575BA9008FD539 /* LoadingViewModel.swift */; };
 		359D1F831E576261008FD539 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F821E576261008FD539 /* Protocols.swift */; };
+		359D1F881E577E81008FD539 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F861E577E80008FD539 /* CategoriesViewController.swift */; };
+		359D1F891E577E81008FD539 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359D1F871E577E80008FD539 /* CategoriesViewController.xib */; };
+		359D1F8C1E578863008FD539 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F8B1E578863008FD539 /* CategoriesViewModel.swift */; };
 		35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F328A41E57496F00E72E28 /* AppDelegate.swift */; };
 		35F328AC1E57497000E72E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AB1E57497000E72E28 /* Assets.xcassets */; };
 		35F328AF1E57497000E72E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AD1E57497000E72E28 /* LaunchScreen.storyboard */; };
@@ -48,6 +51,9 @@
 		359D1F7E1E575569008FD539 /* CoreDataOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperations.swift; sourceTree = "<group>"; };
 		359D1F801E575BA9008FD539 /* LoadingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		359D1F821E576261008FD539 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		359D1F861E577E80008FD539 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		359D1F871E577E80008FD539 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		359D1F8B1E578863008FD539 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		35F328A11E57496F00E72E28 /* alejandro-rodriguez-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alejandro-rodriguez-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F328A41E57496F00E72E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F328AB1E57497000E72E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				359D1F611E574EB9008FD539 /* Loading VC */,
+				359D1F8A1E577E8A008FD539 /* Categories VC */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				359D1F851E5766A3008FD539 /* LoadingView */,
+				359D1F8D1E57913C008FD539 /* CategoriesView */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -168,6 +176,23 @@
 				359D1F801E575BA9008FD539 /* LoadingViewModel.swift */,
 			);
 			name = LoadingView;
+			sourceTree = "<group>";
+		};
+		359D1F8A1E577E8A008FD539 /* Categories VC */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F861E577E80008FD539 /* CategoriesViewController.swift */,
+				359D1F871E577E80008FD539 /* CategoriesViewController.xib */,
+			);
+			name = "Categories VC";
+			sourceTree = "<group>";
+		};
+		359D1F8D1E57913C008FD539 /* CategoriesView */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F8B1E578863008FD539 /* CategoriesViewModel.swift */,
+			);
+			name = CategoriesView;
 			sourceTree = "<group>";
 		};
 		35F328981E57496F00E72E28 = {
@@ -278,6 +303,7 @@
 			files = (
 				359D1F5D1E574D5F008FD539 /* LoadingViewController.xib in Resources */,
 				35F328AF1E57497000E72E28 /* LaunchScreen.storyboard in Resources */,
+				359D1F891E577E81008FD539 /* CategoriesViewController.xib in Resources */,
 				35F328AC1E57497000E72E28 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +365,7 @@
 			files = (
 				359D1F751E575283008FD539 /* CDApplication.swift in Sources */,
 				359D1F661E574F3C008FD539 /* ApplicationsRespnse.swift in Sources */,
+				359D1F881E577E81008FD539 /* CategoriesViewController.swift in Sources */,
 				359D1F641E574F05008FD539 /* Application.swift in Sources */,
 				35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */,
 				359D1F7F1E575569008FD539 /* CoreDataOperations.swift in Sources */,
@@ -353,6 +380,7 @@
 				359D1F6E1E575241008FD539 /* Model.xcdatamodel in Sources */,
 				359D1F7A1E575283008FD539 /* CDPhoto+CoreDataProperties.swift in Sources */,
 				359D1F831E576261008FD539 /* Protocols.swift in Sources */,
+				359D1F8C1E578863008FD539 /* CategoriesViewModel.swift in Sources */,
 				359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ARF.alejandro-rodriguez-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -487,6 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ARF.alejandro-rodriguez-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

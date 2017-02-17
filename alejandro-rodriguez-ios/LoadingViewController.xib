@@ -18,7 +18,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.33333333329999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando Información" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qe-g7-Pud">
+                    <rect key="frame" x="53.5" y="317" width="269" height="33.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6Qe-g7-Pud" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D3j-hZ-cVN"/>
+                <constraint firstItem="6Qe-g7-Pud" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wdQ-Vh-ebd"/>
+            </constraints>
         </view>
     </objects>
 </document>
