@@ -9,15 +9,48 @@
 import UIKit
 
 class LoadingViewController: UIViewController {
-
+    
+    
+    let viewModel = LoadingViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        RappiApiClient.sharedInstance.getTopApplications { (success, response) in
+        
+        viewModel.delegate = self
+        
+        
+        //Fetch data from the view model
+        viewModel.fetchData()
+    }
+    
+    func configureAlertControllerWith(message:String) -> UIAlertController{
+        
+        let alertController = UIAlertController(title: NSLocalizedString("Atención", comment: ""), message:message, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default)
+        alertController.addAction(cancelAction)
+        
+        return alertController
+        
+    }
+    
+}
+
+extension LoadingViewController: LoadingViewModelProtocol{
+    
+    func didDownloadData( success: Bool, error: String?) {
+        if success{
+        }
+        else{
+            
+            //This is a Swift bug. 
+            DispatchQueue.main.async {
+               self.present(self.configureAlertControllerWith(message: error!), animated: true)
+            }
             
         }
+        
         
     }
 }

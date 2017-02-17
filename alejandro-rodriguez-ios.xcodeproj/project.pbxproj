@@ -22,6 +22,8 @@
 		359D1F791E575283008FD539 /* CDPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F731E575283008FD539 /* CDPhoto.swift */; };
 		359D1F7A1E575283008FD539 /* CDPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F741E575283008FD539 /* CDPhoto+CoreDataProperties.swift */; };
 		359D1F7F1E575569008FD539 /* CoreDataOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F7E1E575569008FD539 /* CoreDataOperations.swift */; };
+		359D1F811E575BA9008FD539 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F801E575BA9008FD539 /* LoadingViewModel.swift */; };
+		359D1F831E576261008FD539 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F821E576261008FD539 /* Protocols.swift */; };
 		35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F328A41E57496F00E72E28 /* AppDelegate.swift */; };
 		35F328AC1E57497000E72E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AB1E57497000E72E28 /* Assets.xcassets */; };
 		35F328AF1E57497000E72E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AD1E57497000E72E28 /* LaunchScreen.storyboard */; };
@@ -44,6 +46,8 @@
 		359D1F731E575283008FD539 /* CDPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPhoto.swift; sourceTree = "<group>"; };
 		359D1F741E575283008FD539 /* CDPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		359D1F7E1E575569008FD539 /* CoreDataOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperations.swift; sourceTree = "<group>"; };
+		359D1F801E575BA9008FD539 /* LoadingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		359D1F821E576261008FD539 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		35F328A11E57496F00E72E28 /* alejandro-rodriguez-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alejandro-rodriguez-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F328A41E57496F00E72E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F328AB1E57497000E72E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		359D1F621E574EC7008FD539 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				359D1F821E576261008FD539 /* Protocols.swift */,
 				359D1F5E1E574E97008FD539 /* Constants.swift */,
 			);
 			name = Utils;
@@ -149,6 +154,22 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
+		359D1F841E576695008FD539 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F851E5766A3008FD539 /* LoadingView */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		359D1F851E5766A3008FD539 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F801E575BA9008FD539 /* LoadingViewModel.swift */,
+			);
+			name = LoadingView;
+			sourceTree = "<group>";
+		};
 		35F328981E57496F00E72E28 = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +191,9 @@
 		35F328A31E57496F00E72E28 /* alejandro-rodriguez-ios */ = {
 			isa = PBXGroup;
 			children = (
-				359D1F6C1E575202008FD539 /* Models */,
 				359D1F6B1E57504E008FD539 /* Network */,
+				359D1F6C1E575202008FD539 /* Models */,
+				359D1F841E576695008FD539 /* ViewModels */,
 				359D1F601E574EAE008FD539 /* View Controllers */,
 				359D1F621E574EC7008FD539 /* Utils */,
 				35F328A41E57496F00E72E28 /* AppDelegate.swift */,
@@ -326,9 +348,11 @@
 				359D1F771E575283008FD539 /* CDCategory.swift in Sources */,
 				359D1F791E575283008FD539 /* CDPhoto.swift in Sources */,
 				359D1F5F1E574E97008FD539 /* Constants.swift in Sources */,
+				359D1F811E575BA9008FD539 /* LoadingViewModel.swift in Sources */,
 				359D1F6A1E575033008FD539 /* RappiApiClient.swift in Sources */,
 				359D1F6E1E575241008FD539 /* Model.xcdatamodel in Sources */,
 				359D1F7A1E575283008FD539 /* CDPhoto+CoreDataProperties.swift in Sources */,
+				359D1F831E576261008FD539 /* Protocols.swift in Sources */,
 				359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

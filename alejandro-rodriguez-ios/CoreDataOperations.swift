@@ -27,17 +27,31 @@ class CoreDataOperations {
             
             for application in filteredApplications{
                 
+                //Create Core Data objects. FYI these objects are saved when the autoSave() function is called in the class AppDelegate
                 
                 let cdCategory = CDCategory(name: category, context: NSManagedObjectContext.mr_default())
                 
                 let _ = CDApplication(application: application, category: cdCategory, context: NSManagedObjectContext.mr_default())
             }
-            
-            
+        }
+    }
+    
+    
+    class func isDataAvailable() -> Bool{
+        
+        //Determine if there's data available
+        guard let _ = CDCategory.mr_findFirst() else{
+            return false
         }
         
+        return true
     }
   
+    
+    class func deleteCurrentData(){
+        
+        
+    }
     
     
     
