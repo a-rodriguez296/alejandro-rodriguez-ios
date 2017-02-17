@@ -16,7 +16,7 @@ extension CDPhoto {
         return NSFetchRequest<CDPhoto>(entityName: "CDPhoto");
     }
 
-    @NSManaged public var photoData: NSData?
+    @NSManaged public var photoData: Data?
     @NSManaged public var application: CDApplication?
 
 }

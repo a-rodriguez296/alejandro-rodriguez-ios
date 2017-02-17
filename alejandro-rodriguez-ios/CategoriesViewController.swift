@@ -50,7 +50,12 @@ extension CategoriesViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let category = viewModel.object(at: indexPath) as! CDCategory
-        print(category.name!)
+        
+        if UI_USER_INTERFACE_IDIOM() == .phone{
+            navigationController?.pushViewController(ApplicationsIphoneViewController(category: category),animated: true)
+        }
+        
+        
         
     }
 }

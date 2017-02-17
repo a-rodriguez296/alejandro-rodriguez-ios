@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import MagicalRecord
 
 @objc(CDApplication)
 public class CDApplication: NSManagedObject {
@@ -20,6 +21,13 @@ public class CDApplication: NSManagedObject {
         self.category = category
         self.summary = application.summary
         self.thumbnailURL = application.thumbnailURL
+    }
+    
+    
+    func assignPhoto(image: UIImage){
+        
+        self.photo = CDPhoto(image: image, context: NSManagedObjectContext.mr_default())
+        
     }
     
 }
