@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		359D1F5C1E574D5F008FD539 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */; };
 		359D1F5D1E574D5F008FD539 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */; };
+		359D1F5F1E574E97008FD539 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F5E1E574E97008FD539 /* Constants.swift */; };
+		359D1F641E574F05008FD539 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F631E574F05008FD539 /* Application.swift */; };
+		359D1F661E574F3C008FD539 /* ApplicationsRespnse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */; };
+		359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F671E574FF6008FD539 /* RappiRouter.swift */; };
+		359D1F6A1E575033008FD539 /* RappiApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F691E575033008FD539 /* RappiApiClient.swift */; };
 		35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F328A41E57496F00E72E28 /* AppDelegate.swift */; };
 		35F328AC1E57497000E72E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AB1E57497000E72E28 /* Assets.xcassets */; };
 		35F328AF1E57497000E72E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AD1E57497000E72E28 /* LaunchScreen.storyboard */; };
@@ -18,6 +23,11 @@
 /* Begin PBXFileReference section */
 		359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		359D1F5E1E574E97008FD539 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		359D1F631E574F05008FD539 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsRespnse.swift; sourceTree = "<group>"; };
+		359D1F671E574FF6008FD539 /* RappiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RappiRouter.swift; sourceTree = "<group>"; };
+		359D1F691E575033008FD539 /* RappiApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RappiApiClient.swift; sourceTree = "<group>"; };
 		35F328A11E57496F00E72E28 /* alejandro-rodriguez-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alejandro-rodriguez-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F328A41E57496F00E72E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F328AB1E57497000E72E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +58,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		359D1F601E574EAE008FD539 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F611E574EB9008FD539 /* Loading VC */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		359D1F611E574EB9008FD539 /* Loading VC */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */,
+				359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */,
+			);
+			name = "Loading VC";
+			sourceTree = "<group>";
+		};
+		359D1F621E574EC7008FD539 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F5E1E574E97008FD539 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		359D1F6B1E57504E008FD539 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F691E575033008FD539 /* RappiApiClient.swift */,
+				359D1F671E574FF6008FD539 /* RappiRouter.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		35F328981E57496F00E72E28 = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +113,15 @@
 		35F328A31E57496F00E72E28 /* alejandro-rodriguez-ios */ = {
 			isa = PBXGroup;
 			children = (
+				359D1F6B1E57504E008FD539 /* Network */,
+				359D1F601E574EAE008FD539 /* View Controllers */,
+				359D1F621E574EC7008FD539 /* Utils */,
 				35F328A41E57496F00E72E28 /* AppDelegate.swift */,
 				35F328AB1E57497000E72E28 /* Assets.xcassets */,
 				35F328AD1E57497000E72E28 /* LaunchScreen.storyboard */,
 				35F328B01E57497000E72E28 /* Info.plist */,
-				359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */,
-				359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */,
+				359D1F631E574F05008FD539 /* Application.swift */,
+				359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */,
 			);
 			path = "alejandro-rodriguez-ios";
 			sourceTree = "<group>";
@@ -212,8 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359D1F661E574F3C008FD539 /* ApplicationsRespnse.swift in Sources */,
+				359D1F641E574F05008FD539 /* Application.swift in Sources */,
 				35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */,
 				359D1F5C1E574D5F008FD539 /* LoadingViewController.swift in Sources */,
+				359D1F5F1E574E97008FD539 /* Constants.swift in Sources */,
+				359D1F6A1E575033008FD539 /* RappiApiClient.swift in Sources */,
+				359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
