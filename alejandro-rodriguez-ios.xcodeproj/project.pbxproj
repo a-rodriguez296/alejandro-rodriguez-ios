@@ -14,6 +14,14 @@
 		359D1F661E574F3C008FD539 /* ApplicationsRespnse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */; };
 		359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F671E574FF6008FD539 /* RappiRouter.swift */; };
 		359D1F6A1E575033008FD539 /* RappiApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F691E575033008FD539 /* RappiApiClient.swift */; };
+		359D1F6E1E575241008FD539 /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F6D1E575241008FD539 /* Model.xcdatamodel */; };
+		359D1F751E575283008FD539 /* CDApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F6F1E575283008FD539 /* CDApplication.swift */; };
+		359D1F761E575283008FD539 /* CDApplication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F701E575283008FD539 /* CDApplication+CoreDataProperties.swift */; };
+		359D1F771E575283008FD539 /* CDCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F711E575283008FD539 /* CDCategory.swift */; };
+		359D1F781E575283008FD539 /* CDCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F721E575283008FD539 /* CDCategory+CoreDataProperties.swift */; };
+		359D1F791E575283008FD539 /* CDPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F731E575283008FD539 /* CDPhoto.swift */; };
+		359D1F7A1E575283008FD539 /* CDPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F741E575283008FD539 /* CDPhoto+CoreDataProperties.swift */; };
+		359D1F7F1E575569008FD539 /* CoreDataOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F7E1E575569008FD539 /* CoreDataOperations.swift */; };
 		35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F328A41E57496F00E72E28 /* AppDelegate.swift */; };
 		35F328AC1E57497000E72E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AB1E57497000E72E28 /* Assets.xcassets */; };
 		35F328AF1E57497000E72E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F328AD1E57497000E72E28 /* LaunchScreen.storyboard */; };
@@ -28,6 +36,14 @@
 		359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsRespnse.swift; sourceTree = "<group>"; };
 		359D1F671E574FF6008FD539 /* RappiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RappiRouter.swift; sourceTree = "<group>"; };
 		359D1F691E575033008FD539 /* RappiApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RappiApiClient.swift; sourceTree = "<group>"; };
+		359D1F6D1E575241008FD539 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		359D1F6F1E575283008FD539 /* CDApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApplication.swift; sourceTree = "<group>"; };
+		359D1F701E575283008FD539 /* CDApplication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDApplication+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		359D1F711E575283008FD539 /* CDCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCategory.swift; sourceTree = "<group>"; };
+		359D1F721E575283008FD539 /* CDCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		359D1F731E575283008FD539 /* CDPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPhoto.swift; sourceTree = "<group>"; };
+		359D1F741E575283008FD539 /* CDPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		359D1F7E1E575569008FD539 /* CoreDataOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperations.swift; sourceTree = "<group>"; };
 		35F328A11E57496F00E72E28 /* alejandro-rodriguez-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alejandro-rodriguez-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F328A41E57496F00E72E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F328AB1E57497000E72E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +108,47 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		359D1F6C1E575202008FD539 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F631E574F05008FD539 /* Application.swift */,
+				359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */,
+				359D1F7D1E5752CA008FD539 /* Core Data */,
+				359D1F7E1E575569008FD539 /* CoreDataOperations.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		359D1F7B1E5752B6008FD539 /* Human files */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F6F1E575283008FD539 /* CDApplication.swift */,
+				359D1F711E575283008FD539 /* CDCategory.swift */,
+				359D1F731E575283008FD539 /* CDPhoto.swift */,
+			);
+			name = "Human files";
+			sourceTree = "<group>";
+		};
+		359D1F7C1E5752BF008FD539 /* Machine files */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F701E575283008FD539 /* CDApplication+CoreDataProperties.swift */,
+				359D1F721E575283008FD539 /* CDCategory+CoreDataProperties.swift */,
+				359D1F741E575283008FD539 /* CDPhoto+CoreDataProperties.swift */,
+			);
+			name = "Machine files";
+			sourceTree = "<group>";
+		};
+		359D1F7D1E5752CA008FD539 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F6D1E575241008FD539 /* Model.xcdatamodel */,
+				359D1F7B1E5752B6008FD539 /* Human files */,
+				359D1F7C1E5752BF008FD539 /* Machine files */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		35F328981E57496F00E72E28 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +170,7 @@
 		35F328A31E57496F00E72E28 /* alejandro-rodriguez-ios */ = {
 			isa = PBXGroup;
 			children = (
+				359D1F6C1E575202008FD539 /* Models */,
 				359D1F6B1E57504E008FD539 /* Network */,
 				359D1F601E574EAE008FD539 /* View Controllers */,
 				359D1F621E574EC7008FD539 /* Utils */,
@@ -120,8 +178,6 @@
 				35F328AB1E57497000E72E28 /* Assets.xcassets */,
 				35F328AD1E57497000E72E28 /* LaunchScreen.storyboard */,
 				35F328B01E57497000E72E28 /* Info.plist */,
-				359D1F631E574F05008FD539 /* Application.swift */,
-				359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */,
 			);
 			path = "alejandro-rodriguez-ios";
 			sourceTree = "<group>";
@@ -259,12 +315,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359D1F751E575283008FD539 /* CDApplication.swift in Sources */,
 				359D1F661E574F3C008FD539 /* ApplicationsRespnse.swift in Sources */,
 				359D1F641E574F05008FD539 /* Application.swift in Sources */,
 				35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */,
+				359D1F7F1E575569008FD539 /* CoreDataOperations.swift in Sources */,
 				359D1F5C1E574D5F008FD539 /* LoadingViewController.swift in Sources */,
+				359D1F761E575283008FD539 /* CDApplication+CoreDataProperties.swift in Sources */,
+				359D1F781E575283008FD539 /* CDCategory+CoreDataProperties.swift in Sources */,
+				359D1F771E575283008FD539 /* CDCategory.swift in Sources */,
+				359D1F791E575283008FD539 /* CDPhoto.swift in Sources */,
 				359D1F5F1E574E97008FD539 /* Constants.swift in Sources */,
 				359D1F6A1E575033008FD539 /* RappiApiClient.swift in Sources */,
+				359D1F6E1E575241008FD539 /* Model.xcdatamodel in Sources */,
+				359D1F7A1E575283008FD539 /* CDPhoto+CoreDataProperties.swift in Sources */,
 				359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

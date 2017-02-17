@@ -36,12 +36,11 @@ extension RappiApiClient{
             switch response.result{
             case .success(let value):
                 let json = JSON(value)
-                let _ = ApplicationsResponse(json: json)
+                let applicationsResponse = ApplicationsResponse(json: json)
+                CoreDataOperations.saveCategoriesAndApplications(with: applicationsResponse)
                 completion(true, nil)
-            //                self.delegate?.didDownloadData(success: true, error: nil)
             case .failure(let error):
                 completion(false, error.localizedDescription)
-                //                self.delegate?.didDownloadData(success: false, error: error.localizedDescription)
             }
         }
     }

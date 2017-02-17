@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 
-struct Application {
+struct Application: CustomStringConvertible {
     
     
     let category:String
@@ -25,6 +25,11 @@ struct Application {
         appName =  json[Constants.Endpoints.TopApplications.imName][Constants.Endpoints.TopApplications.label].stringValue
         thumbnailURL = json[Constants.Endpoints.TopApplications.imImage].arrayValue[1][Constants.Endpoints.TopApplications.label].stringValue
         summary = json[Constants.Endpoints.TopApplications.summary][Constants.Endpoints.TopApplications.label].stringValue
+    }
+    
+    
+    var description: String {
+        return category + " " + appName
     }
     
     

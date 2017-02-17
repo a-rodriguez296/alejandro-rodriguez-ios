@@ -14,6 +14,7 @@ struct ApplicationsResponse{
     
     
     let applicationsArray:Array<Application>
+    var categoriesArray = Array<String>()
     
     init(json: JSON) {
         
@@ -24,6 +25,11 @@ struct ApplicationsResponse{
             
             let auxApplication = Application(json: applicationJSON)
             responseArray.append(auxApplication)
+            
+            //Create an array with a list of non-repeated categories
+            if !categoriesArray.contains(auxApplication.category) {
+                categoriesArray.append(auxApplication.category)
+            }
             
         }
         
