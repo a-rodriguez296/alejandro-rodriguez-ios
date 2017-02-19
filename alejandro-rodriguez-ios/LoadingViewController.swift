@@ -50,6 +50,49 @@ class LoadingViewController: UIViewController {
         return view
     }
     
+    fileprivate func setupTransition(){
+        transition.edge = .bottom
+        transition.sticky = false
+        transition.stiffness = 0.5
+    }
+
+    
+    fileprivate func setupSplitVC() -> CustomSplitViewController{
+        
+        let categoriesVC = CategoriesViewController()
+        let firstCategory = CoreDataOperations.getFirstCategory()
+        
+        
+        let applicationsVC:UIViewController = {
+            if UI_USER_INTERFACE_IDIOM() == .pad{
+                let responseIpad = ApplicationsIPadViewController(category: firstCategory)
+                return responseIpad
+            }
+            else{
+                let responseIphone = ApplicationsIphoneViewController(category: firstCategory)
+                return responseIphone
+            }
+            
+        }()
+        
+        let applicationsNavVC = UINavigationController(rootViewController: applicationsVC)
+        
+        categoriesVC.detailVC = applicationsVC
+        
+        let splitVC = CustomSplitViewController()
+        splitVC.viewControllers = [UINavigationController.init(rootViewController: categoriesVC), applicationsNavVC]
+        splitVC.view.backgroundColor = .white
+        
+        applicationsVC.navigationItem.leftItemsSupplementBackButton = true
+        applicationsVC.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
+        
+        
+        splitVC.transitioningDelegate = self.transition
+        splitVC.modalPresentationStyle = .custom
+        
+        return splitVC
+    }
+    
 }
 
 extension LoadingViewController: LoadingViewModelProtocol{
@@ -61,45 +104,9 @@ extension LoadingViewController: LoadingViewModelProtocol{
             let when = DispatchTime.now() + 1.5
             DispatchQueue.main.asyncAfter(deadline: when) {
                 
-                
-                let categoriesVC = CategoriesViewController()
-                let firstCategory = CoreDataOperations.getFirstCategory()
-                
-                
-                let applicationsVC:UIViewController = {
-                    if UI_USER_INTERFACE_IDIOM() == .pad{
-                        let responseIpad = ApplicationsIPadViewController(category: firstCategory)
-                        return responseIpad
-                    }
-                    else{
-                        let responseIphone = ApplicationsIphoneViewController(category: firstCategory)
-                        return responseIphone
-                    }
-                    
-                }()
-                
-                let applicationsNavVC = UINavigationController(rootViewController: applicationsVC)
-                
-                categoriesVC.detailVC = applicationsVC
-                
-                let splitVC = CustomSplitViewController()
-                splitVC.viewControllers = [UINavigationController.init(rootViewController: categoriesVC), applicationsNavVC]
-                splitVC.view.backgroundColor = .white
-                
-                applicationsVC.navigationItem.leftItemsSupplementBackButton = true
-                applicationsVC.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
-                
-                
-                splitVC.transitioningDelegate = self.transition
-                splitVC.modalPresentationStyle = .custom
-               
-                
-                
+                let splitVC = self.setupSplitVC()
                 self.present(splitVC, animated: true, completion: nil)
-                
             }
-            
-            
         }
         else{
             
@@ -114,11 +121,5 @@ extension LoadingViewController: LoadingViewModelProtocol{
     func noInternetConnection(){
         
         SwiftMessages.show(view: createOfflineAlert())
-    }
-    
-    fileprivate func setupTransition(){
-        transition.edge = .bottom
-        transition.sticky = false
-        transition.stiffness = 0.5
     }
 }
