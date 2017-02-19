@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35378E1F1E5A55F400F7CB7E /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35378E1E1E5A55F400F7CB7E /* CustomSplitViewController.swift */; };
 		358DE3901E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DE38E1E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift */; };
 		358DE3911E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 358DE38F1E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib */; };
 		358DE3961E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DE3941E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35378E1E1E5A55F400F7CB7E /* CustomSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
 		358DE38E1E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsIPadViewController.swift; sourceTree = "<group>"; };
 		358DE38F1E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsIPadViewController.xib; sourceTree = "<group>"; };
 		358DE3941E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		35378E201E5A5A1B00F7CB7E /* Custom VCs */ = {
+			isa = PBXGroup;
+			children = (
+				35378E1E1E5A55F400F7CB7E /* CustomSplitViewController.swift */,
+			);
+			name = "Custom VCs";
+			sourceTree = "<group>";
+		};
 		358DE3921E5A16ED00BA8A2D /* iPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		359D1F621E574EC7008FD539 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				35378E201E5A5A1B00F7CB7E /* Custom VCs */,
 				359D1F821E576261008FD539 /* Protocols.swift */,
 				359D1F5E1E574E97008FD539 /* Constants.swift */,
 			);
@@ -481,6 +492,7 @@
 				359D1F8C1E578863008FD539 /* CategoriesViewModel.swift in Sources */,
 				358DE3961E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift in Sources */,
 				359D1F901E57939E008FD539 /* ApplicationsIphoneViewController.swift in Sources */,
+				35378E1F1E5A55F400F7CB7E /* CustomSplitViewController.swift in Sources */,
 				359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

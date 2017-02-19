@@ -82,7 +82,7 @@ extension LoadingViewController: LoadingViewModelProtocol{
                 
                 categoriesVC.detailVC = applicationsVC
                 
-                let splitVC = UISplitViewController()
+                let splitVC = CustomSplitViewController()
                 splitVC.viewControllers = [UINavigationController.init(rootViewController: categoriesVC), applicationsNavVC]
                 splitVC.view.backgroundColor = .white
                 
