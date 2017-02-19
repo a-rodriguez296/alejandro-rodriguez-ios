@@ -11,6 +11,8 @@
 		358DE3911E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 358DE38F1E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib */; };
 		358DE3961E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DE3941E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift */; };
 		358DE3971E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 358DE3951E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib */; };
+		358DE39B1E5A209E00BA8A2D /* ApplicationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DE3991E5A209E00BA8A2D /* ApplicationDetailViewController.swift */; };
+		358DE39C1E5A209E00BA8A2D /* ApplicationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 358DE39A1E5A209E00BA8A2D /* ApplicationDetailViewController.xib */; };
 		359D1F5C1E574D5F008FD539 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */; };
 		359D1F5D1E574D5F008FD539 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */; };
 		359D1F5F1E574E97008FD539 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F5E1E574E97008FD539 /* Constants.swift */; };
@@ -47,6 +49,8 @@
 		358DE38F1E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsIPadViewController.xib; sourceTree = "<group>"; };
 		358DE3941E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsCollectionViewCell.swift; sourceTree = "<group>"; };
 		358DE3951E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsCollectionViewCell.xib; sourceTree = "<group>"; };
+		358DE3991E5A209E00BA8A2D /* ApplicationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDetailViewController.swift; sourceTree = "<group>"; };
+		358DE39A1E5A209E00BA8A2D /* ApplicationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationDetailViewController.xib; sourceTree = "<group>"; };
 		359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		359D1F5E1E574E97008FD539 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -129,12 +133,22 @@
 			name = "Applications Collections Cell";
 			sourceTree = "<group>";
 		};
+		358DE39D1E5A212800BA8A2D /* Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				358DE3991E5A209E00BA8A2D /* ApplicationDetailViewController.swift */,
+				358DE39A1E5A209E00BA8A2D /* ApplicationDetailViewController.xib */,
+			);
+			name = "Detail VC";
+			sourceTree = "<group>";
+		};
 		359D1F601E574EAE008FD539 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				359D1F611E574EB9008FD539 /* Loading VC */,
 				359D1F8A1E577E8A008FD539 /* Categories VC */,
 				359D1F921E579613008FD539 /* ApplicationsVC */,
+				358DE39D1E5A212800BA8A2D /* Detail VC */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -378,6 +392,7 @@
 			files = (
 				359D1F5D1E574D5F008FD539 /* LoadingViewController.xib in Resources */,
 				358DE3911E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib in Resources */,
+				358DE39C1E5A209E00BA8A2D /* ApplicationDetailViewController.xib in Resources */,
 				35F328AF1E57497000E72E28 /* LaunchScreen.storyboard in Resources */,
 				359D1F991E579E7B008FD539 /* ApplicationTableViewCell.xib in Resources */,
 				359D1F891E577E81008FD539 /* CategoriesViewController.xib in Resources */,
@@ -445,6 +460,7 @@
 				359D1F751E575283008FD539 /* CDApplication.swift in Sources */,
 				359D1F661E574F3C008FD539 /* ApplicationsRespnse.swift in Sources */,
 				359D1F881E577E81008FD539 /* CategoriesViewController.swift in Sources */,
+				358DE39B1E5A209E00BA8A2D /* ApplicationDetailViewController.swift in Sources */,
 				359D1F951E579641008FD539 /* ApplicationsViewModel.swift in Sources */,
 				359D1F641E574F05008FD539 /* Application.swift in Sources */,
 				35F328A51E57496F00E72E28 /* AppDelegate.swift in Sources */,

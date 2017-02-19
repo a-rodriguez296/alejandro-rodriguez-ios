@@ -59,7 +59,8 @@ extension ApplicationsIphoneViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let application = viewModel.object(at: indexPath) as! CDApplication
-        print(application.name!)
+        
+        navigationController?.pushViewController(ApplicationDetailViewController(application: application), animated: true)
     }
 }
 

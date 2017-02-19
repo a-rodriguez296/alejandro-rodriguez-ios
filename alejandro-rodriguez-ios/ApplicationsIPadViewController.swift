@@ -60,7 +60,7 @@ extension ApplicationsIPadViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let application = viewModel.object(at: indexPath) as! CDApplication
-        print(application.name!)
+        navigationController?.pushViewController(ApplicationDetailViewController(application: application), animated: true)
     }
 }
 
