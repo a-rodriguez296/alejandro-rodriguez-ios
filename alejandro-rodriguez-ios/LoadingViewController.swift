@@ -57,10 +57,39 @@ extension LoadingViewController: LoadingViewModelProtocol{
             
             let when = DispatchTime.now() + 1.5
             DispatchQueue.main.asyncAfter(deadline: when) {
-                let rootVC = UINavigationController(rootViewController: CategoriesViewController())
-                self.present(rootVC, animated: true, completion: nil)
+                
+                
+                let categoriesVC = CategoriesViewController()
+                let firstCategory = CoreDataOperations.getFirstCategory()
+                
+                
+                let applicationsVC:UIViewController = {
+                    if UI_USER_INTERFACE_IDIOM() == .pad{
+                        let responseIpad = ApplicationsIPadViewController(category: firstCategory)
+                        return responseIpad
+                    }
+                    else{
+                        let responseIphone = ApplicationsIphoneViewController(category: firstCategory)
+                        return responseIphone
+                    }
+                    
+                }()
+                
+                let applicationsNavVC = UINavigationController(rootViewController: applicationsVC)
+                
+                categoriesVC.detailVC = applicationsVC
+                
+                let splitVC = UISplitViewController()
+                splitVC.viewControllers = [UINavigationController.init(rootViewController: categoriesVC), applicationsNavVC]
+                splitVC.view.backgroundColor = .white
+                
+                applicationsVC.navigationItem.leftItemsSupplementBackButton = true
+                applicationsVC.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
+                
+                self.present(splitVC, animated: true, completion: nil)
+                
             }
-           
+            
             
         }
         else{

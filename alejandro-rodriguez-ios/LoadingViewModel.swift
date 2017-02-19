@@ -67,8 +67,7 @@ class LoadingViewModel {
         //There is already downloaded data and there's an internet connection
         else{
             
-            //Delete current data. Since there is a cascade rule, if we delete the categories, the applications and the photos are also deleted.
-            CDCategory.mr_truncateAll()
+            CoreDataOperations.deleteCurrentData()
     
             //Fetch data form the internet
             fetchDataFromNetwork()

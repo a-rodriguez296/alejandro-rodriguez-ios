@@ -9,11 +9,11 @@
 import UIKit
 
 class ApplicationsIPadViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    let viewModel: ApplicationsViewModel
+    var viewModel: ApplicationsViewModel
     
     init(category: CDCategory) {
         viewModel = ApplicationsViewModel(category: category)
@@ -24,19 +24,24 @@ class ApplicationsIPadViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-         viewModel.initializeFetchedResultsController()
-        
+        viewModel.initializeFetchedResultsController()
+        title = viewModel.category.name!
         
         collectionView.register(UINib(nibName: "ApplicationsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         
+        setupNotifications()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -68,5 +73,21 @@ extension ApplicationsIPadViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 198, height: 198)
     }
+}
+
+extension ApplicationsIPadViewController{
+    
+    func setupNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeCategory(notification:)), name: Notification.Name(Constants.Notifications.didChangeCategoryNotification), object: nil)
+    }
+    
+    func didChangeCategory(notification: Notification){
+        
+        viewModel = ApplicationsViewModel(category: (notification.object as? CDCategory)!)
+        viewModel.initializeFetchedResultsController()
+        collectionView.reloadData()
+        title = viewModel.category.name!
+    }
     
 }
+

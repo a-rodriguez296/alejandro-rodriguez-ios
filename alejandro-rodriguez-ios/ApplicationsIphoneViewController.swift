@@ -13,7 +13,7 @@ class ApplicationsIphoneViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    let viewModel: ApplicationsViewModel
+    var viewModel: ApplicationsViewModel
     
     init(category: CDCategory) {
         viewModel = ApplicationsViewModel(category: category)
@@ -32,8 +32,15 @@ class ApplicationsIphoneViewController: UIViewController {
         
         tableView.register(UINib.init(nibName: "ApplicationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
+        title = viewModel.category.name!
         
         viewModel.initializeFetchedResultsController()
+        
+        setupNotifications()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
 }
@@ -62,5 +69,21 @@ extension ApplicationsIphoneViewController: UITableViewDelegate{
         
         navigationController?.pushViewController(ApplicationDetailViewController(application: application), animated: true)
     }
+}
+
+extension ApplicationsIphoneViewController{
+    
+    func setupNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeCategory(notification:)), name: Notification.Name(Constants.Notifications.didChangeCategoryNotification), object: nil)
+    }
+    
+    func didChangeCategory(notification: Notification){
+        
+        viewModel = ApplicationsViewModel(category: (notification.object as? CDCategory)!)
+        viewModel.initializeFetchedResultsController()
+        tableView.reloadData()
+        title = viewModel.category.name!
+    }
+    
 }
 

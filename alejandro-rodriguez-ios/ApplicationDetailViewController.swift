@@ -9,7 +9,7 @@
 import UIKit
 
 class ApplicationDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var txtAppName: UILabel!
     @IBOutlet weak var txtAppCategory: UILabel!
@@ -27,20 +27,19 @@ class ApplicationDetailViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         edgesForExtendedLayout = []
         
-
+        
         imgIcon.clipsToBounds = true
         imgIcon.layoutIfNeeded()
         
         setupViews()
+        
+        setupNotifications()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,10 +48,9 @@ class ApplicationDetailViewController: UIViewController {
         txtFieldAppSummary.flashScrollIndicators()
         txtFieldAppSummary.setContentOffset(CGPoint.zero, animated: true)
         
-        //NSNotifications
-//        notificationsSetup()
+        
     }
-
+    
     
     func setupViews(){
         imgIcon.image = application.photo?.image()
@@ -63,18 +61,21 @@ class ApplicationDetailViewController: UIViewController {
         title = application.name!
     }
     
-//    func notificationsSetup(){
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(didChangeCategory(_:)), name: Constants.NSNotifications.CategorySelected.didSelectCategory, object: nil)
-//    }
-//    
-//    func didChangeCategory(notification:NSNotification){
-//        navigationController?.popViewControllerAnimated(true)
-//    }
-//    
-//    deinit{
-//        NSNotificationCenter.defaultCenter().removeObserver(self)
-//    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
 
+extension ApplicationDetailViewController{
+    
+    func setupNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeCategory(notification:)), name: Notification.Name(Constants.Notifications.didChangeCategoryNotification), object: nil)
+    }
+    
+    func didChangeCategory(notification: Notification){
+        
+        _ = navigationController?.popViewController(animated: true)
+    }
 }
 
 

@@ -50,7 +50,15 @@ class CoreDataOperations {
     
     class func deleteCurrentData(){
         
+        //Delete current data. Since there is a cascade rule, if we delete the categories, the applications and the photos are also deleted.
+        CDCategory.mr_truncateAll()
+    }
+    
+    
+    class func getFirstCategory() ->CDCategory{
         
+        let firstCategory = CDCategory.mr_findFirst(with: nil, sortedBy: "name", ascending: true)
+        return firstCategory!
     }
     
     

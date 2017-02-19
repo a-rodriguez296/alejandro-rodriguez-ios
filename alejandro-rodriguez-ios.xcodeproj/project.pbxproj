@@ -186,7 +186,6 @@
 				359D1F631E574F05008FD539 /* Application.swift */,
 				359D1F651E574F3C008FD539 /* ApplicationsRespnse.swift */,
 				359D1F7D1E5752CA008FD539 /* Core Data */,
-				359D1F7E1E575569008FD539 /* CoreDataOperations.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -214,6 +213,7 @@
 		359D1F7D1E5752CA008FD539 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				359D1F7E1E575569008FD539 /* CoreDataOperations.swift */,
 				359D1F6D1E575241008FD539 /* Model.xcdatamodel */,
 				359D1F7B1E5752B6008FD539 /* Human files */,
 				359D1F7C1E5752BF008FD539 /* Machine files */,

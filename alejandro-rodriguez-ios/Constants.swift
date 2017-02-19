@@ -31,5 +31,9 @@ struct Constants {
         }
     }
     
+    struct Notifications {
+        static let didChangeCategoryNotification = "didChangeCategoryNotification"
+    }
+    
     
 }

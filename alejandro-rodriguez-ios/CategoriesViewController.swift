@@ -13,6 +13,9 @@ class CategoriesViewController: UIViewController {
     
     let viewModel = CategoriesViewModel()
     
+    var detailVC:UIViewController?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,11 +54,11 @@ extension CategoriesViewController: UITableViewDelegate{
         
         let category = viewModel.object(at: indexPath) as! CDCategory
         
-        if UI_USER_INTERFACE_IDIOM() == .phone{
-            navigationController?.pushViewController(ApplicationsIphoneViewController(category: category),animated: true)
-        }
-        else{
-            navigationController?.pushViewController(ApplicationsIPadViewController(category: category), animated: true)
+
+        NotificationCenter.default.post(name: Notification.Name(Constants.Notifications.didChangeCategoryNotification), object: category)
+        
+        if let detail = detailVC{
+            splitViewController?.showDetailViewController(detail.navigationController!, sender: nil)
         }
         
         
