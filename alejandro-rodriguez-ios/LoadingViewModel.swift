@@ -11,7 +11,6 @@ import ReachabilitySwift
 
 
 
-
 class LoadingViewModel {
     
     weak var delegate:LoadingViewModelProtocol?
@@ -36,6 +35,7 @@ class LoadingViewModel {
             
             //Display alert
             delegate?.didDownloadData(success: false, error: NSLocalizedString("Debes tener Internet la primera vez que usas la aplicación", comment: ""))
+            self.delegate?.noInternetConnection()
         }
             
             
@@ -59,6 +59,7 @@ class LoadingViewModel {
             //Do nothing. Use downloaded data
             
             self.delegate?.didDownloadData(success: true, error: nil)
+            self.delegate?.noInternetConnection()
         }
         
             

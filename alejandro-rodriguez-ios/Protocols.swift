@@ -13,4 +13,5 @@ import Foundation
 protocol LoadingViewModelProtocol:class {
     
     func didDownloadData(success:Bool, error:String?)
+    func noInternetConnection()
 }

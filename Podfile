@@ -11,5 +11,6 @@ pod 'SwiftyJSON'
 pod 'MagicalRecord'
 pod 'AlamofireImage'
 pod 'ReachabilitySwift', '~> 3'
+pod 'SwiftMessages'
 
 end

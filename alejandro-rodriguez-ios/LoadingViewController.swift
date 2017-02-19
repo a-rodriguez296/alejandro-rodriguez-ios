@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 class LoadingViewController: UIViewController {
     
@@ -24,7 +25,7 @@ class LoadingViewController: UIViewController {
         viewModel.fetchData()
     }
     
-    func configureAlertControllerWith(message:String) -> UIAlertController{
+    fileprivate func configureAlertControllerWith(message:String) -> UIAlertController{
         
         let alertController = UIAlertController(title: NSLocalizedString("Atención", comment: ""), message:message, preferredStyle: .alert)
         
@@ -33,6 +34,17 @@ class LoadingViewController: UIViewController {
         
         return alertController
         
+    }
+    
+    fileprivate func createOfflineAlert() -> MessageView{
+        
+        let view = MessageView.viewFromNib(layout: .StatusLine)
+        
+        view.configureTheme(.warning)
+        view.configureDropShadow()
+        view.configureContent(title: NSLocalizedString("Atención", comment: ""), body: NSLocalizedString("No tienes conexión a Internet", comment: ""))
+        
+        return view
     }
     
 }
@@ -59,5 +71,10 @@ extension LoadingViewController: LoadingViewModelProtocol{
             }
             
         }
+    }
+    
+    func noInternetConnection(){
+        
+        SwiftMessages.show(view: createOfflineAlert())
     }
 }
