@@ -1,21 +1,17 @@
 //
-//  ApplicationTableViewCell.swift
+//  ApplicationsCollectionViewCell.swift
 //  alejandro-rodriguez-ios
 //
-//  Created by Alejandro Rodriguez on 2/17/17.
+//  Created by Alejandro Rodriguez on 2/19/17.
 //  Copyright © 2017 ARF. All rights reserved.
 //
 
 import UIKit
-import AlamofireImage
-import MagicalRecord
 
-class ApplicationTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var lblAppName: UILabel!
+class ApplicationsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgAppThumbnail: UIImageView!
-    
-    
+    @IBOutlet weak var lblAppName: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -23,7 +19,8 @@ class ApplicationTableViewCell: UITableViewCell {
         imgAppThumbnail.clipsToBounds = true
         imgAppThumbnail.layoutIfNeeded()
     }
-
+    
+    
     func initializeCell(with application: CDApplication){
         
         lblAppName.text = application.name!
@@ -41,7 +38,7 @@ class ApplicationTableViewCell: UITableViewCell {
                                         imageTransition: .flipFromLeft(1),
                                         runImageTransitionIfCached: false,
                                         completion: { (response) in
-                
+                                            
                                             switch response.result{
                                             case .success(let image):
                                                 application.assignPhoto(image: image)
@@ -59,5 +56,6 @@ class ApplicationTableViewCell: UITableViewCell {
         imgAppThumbnail.af_cancelImageRequest()
         imgAppThumbnail.image = nil
     }
-    
+
+
 }

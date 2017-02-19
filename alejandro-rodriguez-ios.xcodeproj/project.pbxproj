@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358DE3901E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DE38E1E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift */; };
+		358DE3911E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 358DE38F1E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib */; };
+		358DE3961E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DE3941E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift */; };
+		358DE3971E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 358DE3951E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib */; };
 		359D1F5C1E574D5F008FD539 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */; };
 		359D1F5D1E574D5F008FD539 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */; };
 		359D1F5F1E574E97008FD539 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D1F5E1E574E97008FD539 /* Constants.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		358DE38E1E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsIPadViewController.swift; sourceTree = "<group>"; };
+		358DE38F1E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsIPadViewController.xib; sourceTree = "<group>"; };
+		358DE3941E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsCollectionViewCell.swift; sourceTree = "<group>"; };
+		358DE3951E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsCollectionViewCell.xib; sourceTree = "<group>"; };
 		359D1F5A1E574D5F008FD539 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		359D1F5B1E574D5F008FD539 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		359D1F5E1E574E97008FD539 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -92,6 +100,33 @@
 				A7F0C0899BE9E2D096A7EF24 /* Pods_alejandro_rodriguez_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		358DE3921E5A16ED00BA8A2D /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				358DE38E1E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift */,
+				358DE38F1E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		358DE3931E5A184A00BA8A2D /* Applications Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				359D1F961E579E7B008FD539 /* ApplicationTableViewCell.swift */,
+				359D1F971E579E7B008FD539 /* ApplicationTableViewCell.xib */,
+			);
+			name = "Applications Table Cell";
+			sourceTree = "<group>";
+		};
+		358DE3981E5A1A6100BA8A2D /* Applications Collections Cell */ = {
+			isa = PBXGroup;
+			children = (
+				358DE3941E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift */,
+				358DE3951E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib */,
+			);
+			name = "Applications Collections Cell";
 			sourceTree = "<group>";
 		};
 		359D1F601E574EAE008FD539 /* View Controllers */ = {
@@ -211,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				359D1F931E57961F008FD539 /* iPhone */,
+				358DE3921E5A16ED00BA8A2D /* iPad */,
 			);
 			name = ApplicationsVC;
 			sourceTree = "<group>";
@@ -227,8 +263,8 @@
 		359D1F9A1E57AA55008FD539 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				359D1F961E579E7B008FD539 /* ApplicationTableViewCell.swift */,
-				359D1F971E579E7B008FD539 /* ApplicationTableViewCell.xib */,
+				358DE3931E5A184A00BA8A2D /* Applications Table Cell */,
+				358DE3981E5A1A6100BA8A2D /* Applications Collections Cell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -341,9 +377,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				359D1F5D1E574D5F008FD539 /* LoadingViewController.xib in Resources */,
+				358DE3911E5A16DC00BA8A2D /* ApplicationsIPadViewController.xib in Resources */,
 				35F328AF1E57497000E72E28 /* LaunchScreen.storyboard in Resources */,
 				359D1F991E579E7B008FD539 /* ApplicationTableViewCell.xib in Resources */,
 				359D1F891E577E81008FD539 /* CategoriesViewController.xib in Resources */,
+				358DE3971E5A186A00BA8A2D /* ApplicationsCollectionViewCell.xib in Resources */,
 				359D1F911E57939E008FD539 /* ApplicationsIphoneViewController.xib in Resources */,
 				35F328AC1E57497000E72E28 /* Assets.xcassets in Resources */,
 			);
@@ -421,9 +459,11 @@
 				359D1F811E575BA9008FD539 /* LoadingViewModel.swift in Sources */,
 				359D1F6A1E575033008FD539 /* RappiApiClient.swift in Sources */,
 				359D1F6E1E575241008FD539 /* Model.xcdatamodel in Sources */,
+				358DE3901E5A16DC00BA8A2D /* ApplicationsIPadViewController.swift in Sources */,
 				359D1F7A1E575283008FD539 /* CDPhoto+CoreDataProperties.swift in Sources */,
 				359D1F831E576261008FD539 /* Protocols.swift in Sources */,
 				359D1F8C1E578863008FD539 /* CategoriesViewModel.swift in Sources */,
+				358DE3961E5A186A00BA8A2D /* ApplicationsCollectionViewCell.swift in Sources */,
 				359D1F901E57939E008FD539 /* ApplicationsIphoneViewController.swift in Sources */,
 				359D1F681E574FF6008FD539 /* RappiRouter.swift in Sources */,
 			);

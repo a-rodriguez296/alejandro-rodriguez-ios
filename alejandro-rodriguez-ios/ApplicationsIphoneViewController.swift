@@ -30,8 +30,6 @@ class ApplicationsIphoneViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        
-        
         tableView.register(UINib.init(nibName: "ApplicationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         

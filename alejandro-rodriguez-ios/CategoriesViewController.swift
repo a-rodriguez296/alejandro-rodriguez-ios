@@ -54,6 +54,9 @@ extension CategoriesViewController: UITableViewDelegate{
         if UI_USER_INTERFACE_IDIOM() == .phone{
             navigationController?.pushViewController(ApplicationsIphoneViewController(category: category),animated: true)
         }
+        else{
+            navigationController?.pushViewController(ApplicationsIPadViewController(category: category), animated: true)
+        }
         
         
         
