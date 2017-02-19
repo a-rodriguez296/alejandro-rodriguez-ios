@@ -65,6 +65,14 @@ extension ApplicationsIPadViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let application = viewModel.object(at: indexPath) as! CDApplication
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionReveal
+        self.navigationController?.view.layer.add(transition, forKey: nil)
+        
+        
         navigationController?.pushViewController(ApplicationDetailViewController(application: application), animated: true)
     }
 }

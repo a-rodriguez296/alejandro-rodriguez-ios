@@ -8,14 +8,17 @@
 
 import UIKit
 import SwiftMessages
+import ElasticTransition
 
 class LoadingViewController: UIViewController {
     
-    
+    var transition = ElasticTransition()
     let viewModel = LoadingViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTransition()
         
         
         viewModel.delegate = self
@@ -86,6 +89,12 @@ extension LoadingViewController: LoadingViewModelProtocol{
                 applicationsVC.navigationItem.leftItemsSupplementBackButton = true
                 applicationsVC.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
                 
+                
+                splitVC.transitioningDelegate = self.transition
+                splitVC.modalPresentationStyle = .custom
+               
+                
+                
                 self.present(splitVC, animated: true, completion: nil)
                 
             }
@@ -105,5 +114,11 @@ extension LoadingViewController: LoadingViewModelProtocol{
     func noInternetConnection(){
         
         SwiftMessages.show(view: createOfflineAlert())
+    }
+    
+    fileprivate func setupTransition(){
+        transition.edge = .bottom
+        transition.sticky = false
+        transition.stiffness = 0.5
     }
 }
